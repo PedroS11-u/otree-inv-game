@@ -1,0 +1,28 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}Round Results{{ endblock }}
+
+{{ block content }}
+
+<p style="font-size: 18px; text-align: center;">
+    The results of this round are:
+</p>
+
+<p style="font-size: 24px; text-align: center; color: {% if earnings >= 0 %}green{% else %}red{% endif %};">
+    {% if earnings >= 0 %}
+        You earned {{ earnings }} units from your investment!
+    {% else %}
+        You lost {{ earnings }} units from your investment.
+    {% endif %}
+</p>
+
+<p style="font-size: 24px; text-align: center; color: green;">
+    Additionally, you earned {{ interest }} units in interest.
+</p>
+
+<p style="font-size: 18px; text-align: center;">
+    Your total funds are now: {{ total_funds }} units.
+</p>
+
+{{ next_button }}
+
+{{ endblock }}

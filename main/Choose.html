@@ -1,0 +1,16 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}Investment Choice - Round {{ current_round }}{{ endblock }}
+
+{{ block content }}
+
+<p> Round {{ current_round }}: You now need to decide how much money you want to invest. </p>
+
+<p> You have a total of {{ current_funds }} units of money. The amount you invest cannot exceed your current funds.
+    There's a 50/50 chance of doubling the amount invested or to lose it all. The quantity not invested will earn 5% interest. </p>
+
+{{ formfield "amount" label="Investment Amount" }}
+
+{{ next_button }}
+
+{{ endblock }}
+
