@@ -30,7 +30,7 @@ SECRET_KEY = 'blahblah'
 
 # if an app is included in SESSION_CONFIGS, you don't need to list it here
 INSTALLED_APPS = ['otree']
-ALLOWED_HOSTS = ['inv-game.wuaze.com']
-DEBUG = True
+ALLOWED_HOSTS = ['inv-game.fly.dev']
+DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
 
 
